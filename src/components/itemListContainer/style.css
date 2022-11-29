@@ -1,0 +1,10 @@
+.text-wolcome {
+  margin: auto;
+  letter-spacing: 0.0015em;
+  font-size: 4rem;
+  text-shadow: 0 1px #c82d38, -1px 0 #c0cbff, -1px 2px #c82d38, -2px 1px #c0cbff,
+    -2px 3px #c82d38, -3px 2px #c0cbff, -3px 4px #c82d38, -4px 3px #c0cbff,
+    -4px 5px #c82d38, -5px 4px #c0cbff, -5px 6px #c82d38, -6px 5px #c0cbff,
+    -6px 7px #c82d38, -7px 6px #c0cbff, -7px 8px #c82d38, -8px 7px #c0cbff;
+  text-align: center;
+}

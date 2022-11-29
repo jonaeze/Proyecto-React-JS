@@ -1,0 +1,53 @@
+.navBarItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: 0px 30px;
+  background-color: brown;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  width: 95%;
+  height: 80px;
+  border-radius: 15px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.logo {
+  color: white;
+  cursor: pointer;
+  justify-self: start;
+}
+
+.fa-react {
+  margin-left: 0.2rem;
+  font-size: 1.5rem;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 10px;
+  list-style: none;
+  align-items: center;
+  text-align: center;
+  justify-content: end;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  padding: 0.7rem 1rem;
+}
+
+.nav-link i {
+  padding-right: 10px;
+}
+
+.nav-link:hover {
+  background-color: black;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
