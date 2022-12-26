@@ -1,4 +1,4 @@
-.text-wolcome {
+/* .text-wolcome {
   margin: auto;
   letter-spacing: 0.0015em;
   font-size: 4rem;
@@ -7,4 +7,15 @@
     -4px 5px #c82d38, -5px 4px #c0cbff, -5px 6px #c82d38, -6px 5px #c0cbff,
     -6px 7px #c82d38, -7px 6px #c0cbff, -7px 8px #c82d38, -8px 7px #c0cbff;
   text-align: center;
+} */
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  max-width: 1280px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }

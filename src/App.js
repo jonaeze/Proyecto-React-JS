@@ -1,18 +1,10 @@
-import "./App.css";
-import NavBarItems from "./components/navbar";
-import ItemList from "./components/itemListContainer";
+import React from "react";
+import { Home } from "./pages";
+import { Routes, Route } from "react-router-dom";
+import Router from "./routers";
 
-function App() {
-  return (
-    <div className="App">
-      <div>
-        <NavBarItems></NavBarItems>
-      </div>
-      <header className="App-header">
-        <ItemList greeting="Bienvenidos a mi Proyecto"></ItemList>
-      </header>
-    </div>
-  );
-}
+const app = () => {
+  return <Router />;
+};
 
-export default App;
+export default app;

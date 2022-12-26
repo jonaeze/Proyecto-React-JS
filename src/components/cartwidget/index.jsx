@@ -1,10 +1,10 @@
 import React from "react";
-import "../cartwidget/style.css";
+import "../cartwidget/styles.css";
 
-const ButtonCart = (props) => {
+const ButtonCart = ({ text, onHandlerClick }) => {
   return (
-    <button className="button-cart">
-      <i className="bi bi-cart-fill"></i> {props.text}
+    <button onClick={onHandlerClick} className="button-cart">
+      <i className="bi bi-cart-fill"></i> {text}
     </button>
   );
 };

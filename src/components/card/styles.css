@@ -1,0 +1,84 @@
+.card {
+  background-color: brown;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5rem;
+  padding: 1rem;
+  max-width: 300px;
+  min-height: 500px;
+  transition: all 0.2s ease-in-out;
+}
+.card:hover {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 2);
+  cursor: pointer;
+  scale: 1.04;
+}
+
+.card-image {
+  width: 200px;
+  height: 200px;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-name {
+  font-size: 1.2rem;
+  color: black;
+}
+.card-description {
+  font-size: 0.9rem;
+  color: black;
+}
+.card-price {
+  font-size: 1.5rem;
+  color: black;
+}
+.card-stock {
+  font-size: 1rem;
+  color: black;
+}
+.card-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.card-button-minus {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: red;
+}
+input {
+  text-align: center;
+}
+.card-input {
+  background-color: white;
+  border: 1px solid black;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  color: white;
+}
+.card-button-plus {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: green;
+}
