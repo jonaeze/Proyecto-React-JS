@@ -1,10 +1,17 @@
 import React from "react";
-import { Home } from "./pages";
-import { Routes, Route } from "react-router-dom";
 import Router from "./routers";
+import { NavBarItems } from "./components";
+import { CartProvider } from "./context";
 
 const app = () => {
-  return <Router />;
+  return (
+    <div>
+      <CartProvider>
+        <NavBarItems></NavBarItems>
+        <Router />
+      </CartProvider>
+    </div>
+  );
 };
 
 export default app;

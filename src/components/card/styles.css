@@ -6,7 +6,7 @@
   align-items: center;
   margin: 0.5rem;
   padding: 1rem;
-  max-width: 300px;
+  max-width: 200px;
   min-height: 500px;
   transition: all 0.2s ease-in-out;
 }
@@ -14,6 +14,20 @@
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 2);
   cursor: pointer;
   scale: 1.04;
+}
+
+.cardMax {
+  background-color: brown;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0.5rem;
+  padding: 1rem;
+  max-width: 600px;
+  width: 60%;
+  min-height: 300px;
+  transition: all 0.2s ease-in-out;
 }
 
 .card-image {
@@ -25,6 +39,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 5px;
 }
 .card-name {
   font-size: 1.2rem;
@@ -40,7 +55,7 @@
 }
 .card-stock {
   font-size: 1rem;
-  color: black;
+  color: white;
 }
 .card-button-container {
   display: flex;
@@ -59,6 +74,17 @@
   cursor: pointer;
   color: red;
 }
+.card-button-minus:hover {
+  background-color: black;
+  color: red;
+}
+
+.card-button-minus:disabled {
+  background-color: gray;
+  color: black;
+  cursor: not-allowed;
+}
+
 input {
   text-align: center;
 }
@@ -69,7 +95,7 @@ input {
   height: 2rem;
   font-size: 1rem;
   margin: 0 0.5rem;
-  color: white;
+  color: black;
 }
 .card-button-plus {
   background-color: white;
@@ -81,4 +107,16 @@ input {
   align-items: center;
   cursor: pointer;
   color: green;
+  transition: all 0, 2s ease-in-out;
+}
+
+.card-button-plus:hover {
+  background-color: green;
+  color: black;
+}
+
+.card-button-plus:disabled {
+  background-color: gray;
+  color: black;
+  cursor: not-allowed;
 }

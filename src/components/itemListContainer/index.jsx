@@ -8,15 +8,19 @@ const ItemList = () => {
   const onHandlerSelect = (product) => {
     navigate(`/product/${product.id}`, { state: product });
   };
+
   return (
-    <div className="products-container">
-      {PRODUCTS.map((product) => (
-        <Card
-          product={product}
-          key={product.name}
-          onSelect={onHandlerSelect}
-        ></Card>
-      ))}
+    <div className="item-list-container">
+      <h1>Productos Destacados</h1>
+      <div className="products-container">
+        {PRODUCTS.map((product) => (
+          <Card
+            product={product}
+            key={product.id}
+            onSelect={onHandlerSelect}
+          ></Card>
+        ))}
+      </div>
     </div>
   );
 };

@@ -20,10 +20,20 @@
   touch-action: manipulation;
 }
 
-.button-cart:hover {
-  box-shadow: rgba(44, 187, 99, 0.35) 0 -25px 18px -14px inset,
-    rgba(44, 187, 99, 0.25) 0 1px 2px, rgba(44, 187, 99, 0.25) 0 2px 4px,
-    rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px,
-    rgba(44, 187, 99, 0.25) 0 16px 32px;
-  transform: scale(1.05) rotate(-1deg);
+.header-menu-cart-number-container {
+  width: 22px;
+  height: 22px;
+  background-color: black;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  top: 0.4rem;
+  right: 4rem;
+}
+.header-menu-cart-number {
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: bold;
 }

@@ -26,3 +26,33 @@
   font-size: 1.2rem;
   font-weight: bold;
 }
+.button-cart-sidebar {
+  cursor: pointer;
+  background-color: #8ef6a8ce;
+  color: black;
+  padding: 1.2rem;
+  margin: 2rem;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.button-cart-sidebar:hover {
+  background-color: black;
+  color: #8ef6a8ce;
+}
+
+.container-cart-sidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 1rem 0;
+  height: 88%;
+}
