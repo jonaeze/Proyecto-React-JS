@@ -7,7 +7,7 @@
   margin: 0.5rem;
   padding: 1rem;
   max-width: 200px;
-  min-height: 500px;
+  min-height: 532px;
   transition: all 0.2s ease-in-out;
 }
 .card:hover {
@@ -39,7 +39,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5px;
+  padding: 0px 5px;
 }
 .card-name {
   font-size: 1.2rem;

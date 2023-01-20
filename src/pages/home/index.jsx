@@ -1,19 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./styles.css";
-import { ItemList, Progress } from "../../components";
+import { ItemList, Progress, FilterMenuItem } from "../../components";
 import Loader from "../../components/loader";
-import {
-  getFirestore,
-  collection,
-  getDocs,
-  query,
-  where,
-} from "firebase/firestore";
+
+import { useFirebase } from "../../hooks/useFirebase.js";
 
 const Home = () => {
-  const [loading, setLoading] = useState(true);
+  const { loading } = useFirebase();
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [products, setProducts] = useState([]);
 
   useEffect(() => {
     const getDocHeight = () => {
@@ -47,30 +41,6 @@ const Home = () => {
     return () => {
       document.removeEventListener("scroll", handleScroll);
     };
-  }, []);
-
-  useEffect(() => {
-    setLoading(true);
-    const db = getFirestore();
-
-    const q = query(collection(db, "products"), where("categoryId", ">", "1"));
-
-    // const products = collection(db, "products");
-
-    getDocs(q)
-      .then((snapshot) => {
-        if (snapshot.size === 0) {
-          console.log("No hay resultados");
-          setProducts([]);
-        } else {
-          const result = snapshot.docs.map((doc) => doc.data());
-          setProducts(result);
-        }
-      })
-      .catch((error) => {})
-      .finally(() => {
-        setLoading(false);
-      });
   }, []);
 
   return (

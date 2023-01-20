@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { PRODUCTS } from "../constants/data/products";
+import { useFirebase } from "../hooks/useFirebase.js";
 
 const initialState = {
   products: [],
@@ -14,7 +14,7 @@ const initialState = {
 export const CartContext = createContext(initialState);
 
 export const CartProvider = ({ children }) => {
-  const [products, setProducts] = useState([]);
+  const { products } = useFirebase();
   const [cart, setCart] = useState([]);
 
   const onDecreaseItem = (id) => {
@@ -37,7 +37,7 @@ export const CartProvider = ({ children }) => {
   };
 
   const onIncreaseItem = (id) => {
-    const item = PRODUCTS.find((product) => product.id === id);
+    const item = products.find((product) => product.id === id);
     if (cart?.find((product) => product.id === id)?.quantity === item.stock)
       return;
     if (cart?.length === 0) {
@@ -85,7 +85,6 @@ export const CartProvider = ({ children }) => {
         onRemoveItem,
         total,
         products,
-        setProducts,
       }}
     >
       {children}
