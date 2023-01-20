@@ -21,7 +21,13 @@ const NavBarItems = () => {
   return (
     <nav className="navBarItems" user={user[0]}>
       <Sidebar onClose={onHandlerClick} isOpen={isOpen} />
-      <Link to="/" className="link-logo">
+      <Link
+        to="/"
+        className="link-logo"
+        onClick={() => {
+          window.location.reload();
+        }}
+      >
         <h1 className="logo">
           Madero City <i className="fab fa-react"></i>
         </h1>

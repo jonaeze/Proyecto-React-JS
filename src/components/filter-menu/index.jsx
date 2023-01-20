@@ -5,7 +5,7 @@ const FilterMenuItem = ({ name, id, onFilter }) => {
   return (
     <div className="filter-menu-item">
       <button
-        className="filter-menu-button"
+        className="button-filter btn"
         id={id}
         onClick={() => onFilter(id)}
       >

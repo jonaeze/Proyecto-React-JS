@@ -6,7 +6,7 @@ import { CartItem } from "../../components";
 import { addDoc, getFirestore, collection } from "firebase/firestore";
 
 const Cart = () => {
-  const { cart, total } = useContext(CartContext);
+  const { cart, total, onRemoveItem } = useContext(CartContext);
   const onHandleOrder = () => {
     const newOrder = {
       buyer: {
@@ -55,7 +55,7 @@ const Cart = () => {
         {cart.length > 0 ? (
           <>
             {cart.map((item) => (
-              <CartItem key={item.id} {...item} />
+              <CartItem key={item.id} {...item} onRemoveItem={onRemoveItem} />
             ))}
             <div className="button-container-order">
               <button
