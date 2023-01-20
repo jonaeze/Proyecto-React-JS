@@ -6,7 +6,7 @@ import { useFirebase } from "../../hooks/useFirebase.js";
 import FilterMenuItem from "../filter-menu";
 import {
   collection,
-  getDoc,
+  getDocs,
   getFirestore,
   where,
   query,
@@ -25,7 +25,7 @@ const ItemList = () => {
     const db = getFirestore();
     const q = query(collection(db, "products"), where("categoryId", "==", id));
 
-    getDoc(q)
+    getDocs(q)
       .then((snapshot) => {
         if (snapshot.size === 0) {
           console.log("No Hay Resultados");
